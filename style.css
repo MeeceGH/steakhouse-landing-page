@@ -128,7 +128,12 @@ body {
     background-position: center;
     border-top: 3px solid var(--gold);
     border-bottom: 3px solid var(--gold);
-    transition: opacity .6s ease-in;
+    transition: opacity .4s ease-in;
+}
+
+#hero .hero-bg:hover {
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
 }
 
 .hero-bg.show {
@@ -172,12 +177,13 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    padding: 15px 20px 25px;
+    padding: 15px 15px 25px;
+    z-index: 90;
 }
 
-.btn {
+.home-buttons .btn {
     padding: 10px 15px;
-    width: 150px;
+    width: 140px;
     border: none;
     border-radius: 3px;
     background-color: var(--red);
@@ -185,6 +191,21 @@ body {
     font-weight: bold;
     z-index: 90;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.home-buttons .btn:active {
+    transform: scale(0.98);
+}
+
+.home-buttons .btn:focus {
+    outline: none;
+}
+
+.home-buttons .btn:hover {
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
 }
 
 #footer {
@@ -203,4 +224,73 @@ body {
     text-decoration: none;
     cursor: pointer;
     z-index: 40;
+}
+
+#footer a:hover {
+    opacity: 0.5;
+}
+
+@media (min-width: 800px) {
+    .fa-bars {
+        display: none;
+    }
+
+    .navbar {
+        position: absolute;
+    }
+
+    .navbar ul {
+        top: auto;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar ul .fa {
+        display: none;
+    }
+
+    .navbar ul li {
+        font-size: 1rem;
+        padding: 15px 0;
+    }
+
+    .navbar ul li a {
+        padding: 10px 20px;
+        margin: 0 30px;
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        z-index: 100;
+    }
+
+    #hero {
+        height: 50%;
+    }
+
+    .hero-bg h2 {
+        right: 15%;
+        margin-bottom: 25px;
+        margin-right: 0;
+        font-size: 3rem;
+    }
+
+    #home-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #home-container .home-box {
+        width: 50%;
+        padding: 40px 70px 25px;
+    }
+
 }
