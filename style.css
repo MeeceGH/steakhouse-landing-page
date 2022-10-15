@@ -163,7 +163,7 @@ body {
 }
 
 #home-container {
-    padding: 25px 45px;
+    padding: 25px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -232,6 +232,32 @@ body {
 
 #footer a:hover {
     opacity: 0.5;
+}
+
+@media (max-width: 340px) {
+    #home-container {
+        padding: 20px 20px;
+    }
+
+    #home-container .home-buttons {
+        padding: 0;
+    }
+
+    .home-buttons .btn {
+        font-size: 0.0rem;
+        width: 100px;
+    }
+}
+
+@media (max-width: 420px) {
+    #home-container .home-buttons {
+        padding: 0;
+    }
+
+    .home-buttons .btn {
+        font-size: 0.9rem;
+        width: 120px;
+    }
 }
 
 @media (min-width: 800px) {
